@@ -2,11 +2,13 @@
   "name": "videowebgl",
   "version": "0.1.0",
   "description": "WebGL engine that helps to build videos",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=4.2.4"
   },
   "scripts": {
+    "build": "rm dist/*.* && tsc",
     "test": "mocha --reporter spec"
   },
   "repository": {
@@ -19,13 +21,15 @@
     "engine"
   ],
   "author": "Sergio Leon <sergiom.leon@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/l30n/video-webgl/issues"
   },
   "homepage": "https://github.com/l30n/video-webgl#readme",
   "devDependencies": {
+    "typescript": "^2.8.3",
     "chai": "^4.1.2",
     "mocha": "^5.1.1"
-  }
+  },
+  "dependencies": {}
 }
