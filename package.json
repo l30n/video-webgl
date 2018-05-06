@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "rm dist/*.* && tsc",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js - - -R spec"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,11 @@
   },
   "homepage": "https://github.com/l30n/video-webgl#readme",
   "devDependencies": {
-    "typescript": "^2.8.3",
     "chai": "^4.1.2",
-    "mocha": "^5.1.1"
+    "coveralls": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.1.1",
+    "typescript": "^2.8.3"
   },
   "dependencies": {}
 }
